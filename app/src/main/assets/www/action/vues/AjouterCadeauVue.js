@@ -1,17 +1,20 @@
 var AjouterCadeauVue = function(){
+	instance = this;
 	this.cadeau = null;
 	this.afficher = function(){
 
 		this.cadeau = null;
 		$("body").html(AjouterCadeauVue.pageAjouterCadeau);
-		$("#formulaire-ajouter").on("submit", function(e){
+		$("#formulaire-ajouter").on("submit", function(evenement){
+			evenement.preventDefault();
 
 			var nom = $("#nom").val();
 			var marque = $("#marque").val();
+			var prix = $("#prix").val();
 			var description = $("#description").val();
-			this.cadeau = new Cadeau(nom, marque, prix, description);
-			window.location.hash = "#AjouterCadeauVue-->NouveauCadeau";
-			e.preventDefault();
+			instance.cadeau = new Cadeau(nom, marque, prix, description);
+			window.location.hash = "#AjouterCadeauVue:NouveauCadeau";
+			evenement.preventDefault(evenement);
 
 		});
 

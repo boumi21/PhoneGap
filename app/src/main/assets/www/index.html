@@ -22,7 +22,7 @@
 
      <script id="page-ajouter-cadeau" type="text/plain">
      <h1>Ajouter un cadeau</h1>
-        <form>
+        <form id= "formulaire-ajouter">
             <fieldset>
               <legend>Identification du cadeau</legend>
               <div>
@@ -39,6 +39,13 @@
               <div>
                   <label for="description">Description</label>
                   <textarea name="description" id="description"></textarea>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>prix</legend>
+              <div>
+                  <label for="prix">Prix</label>
+                  <textarea name="prix" id="prix"></textarea>
               </div>
             </fieldset>
             <input type ="submit" value="ajouter le cadeau"/>
