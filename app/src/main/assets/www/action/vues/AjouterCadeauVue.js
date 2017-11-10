@@ -14,7 +14,6 @@ var AjouterCadeauVue = function(){
 			var description = $("#description").val();
 			instance.cadeau = new Cadeau(nom, marque, prix, description);
 			window.location.hash = "#AjouterCadeauVue:NouveauCadeau";
-			evenement.preventDefault(evenement);
 
 		});
 
